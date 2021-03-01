@@ -4,7 +4,6 @@
 ---
 
 ## Bez typů se obejdeme 
-^ Python je dynamicky typovaný jazyk a tak se be typu obejde. Můžeme tedy napsat funkci vynásob, která bude funkční pro další typy než jen čísla. Když si to projdeme jaké je typ b v a co bude výsledek?
 
 Python je dynamicky typovaný jazyk:
 
@@ -23,7 +22,6 @@ Takové chování nazýváme (operator) overloading nebo polymorphism.
 ---
 
 ## Co jsou type hints?
-^ PEP 484 představil syntaxy pro napovědu typy. (Víte co to je PEP?) Python Enhancemend Proposal. 
 
 Definoval [PEP 484](https://www.python.org/dev/peps/pep-0484/)
 
