@@ -17,23 +17,26 @@ vynasob(2, [2])
 vynasob(2, "robot")
 vynasob(2, b"robot")
 ```
-Takové chování nazýváme (operator) overloading nebo polymorphism.
+Takové chování nazýváme (operator) overloading nebo [ad hoc polymorphism](https://en.wikipedia.org/wiki/Ad_hoc_polymorphism).
 
 ---
 
 ## Co jsou type hints?
 
-Definoval [PEP 484](https://www.python.org/dev/peps/pep-0484/)
+Definoval [PEP 484](https://www.python.org/dev/peps/pep-0484/):
 
 ```python
 def vynasob(a: int, b: int) -> int:
     return a * b
 ```
 
-Při běhu skriptu se typ nekontroluje
+Při běhu skriptu se typ nekontroluje:
 
 ```python
+vynasob(2, .5)
+vynasob(2, [2])
 vynasob(2, "robot")
+vynasob(2, b"robot")
 ```
 ---
 
@@ -51,7 +54,7 @@ vynasob(2, "robot")
 
 `$ python -m pip install mypy`
 
-Zavoláme z cmd:
+a zavoláme z cmd:
 
 `$ mypy vynasob_1.py`
 
@@ -77,9 +80,18 @@ Nedochází k vyhodnocení při definici funkcí.
 
 ---
 
+## Opakování
+
+- Použití je nepovinné.
+- Lze použít jen pro vybrané části kódu.
+- Na běh skriptu to nemá žádný vliv (typy se nekontrolují).
+- Pokud type hints používáte aplikujte i type checker.
+
+---
+
 ## Užitečné odkazy
 
-- [Repozitář s příklady](https://github.com/Slavaqq/type_hints)
+- [Github s příklady](https://github.com/Slavaqq/type_hints)
 - [Modul typing](https://docs.python.org/3.7/library/typing.html?highlight=typing#module-typing)
 - [Mypy cheatsheet](https://mypy.readthedocs.io/en/stable/cheat_sheet_py3.html)
 - [Real Python - Type Checking](https://realpython.com/python-type-checking/)
