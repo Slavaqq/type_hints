@@ -1,6 +1,7 @@
 from typing import Tuple, TypeVar, Union
 
-MujTyp = TypeVar("MujTyp", Tuple[str, str], Tuple[int, int])
+StrTuple = Tuple[str, str]
+MujTyp = TypeVar("MujTyp", StrTuple, Tuple[int, int])
 
 
 def secti(ab: MujTyp) -> Union[str, int]: 
